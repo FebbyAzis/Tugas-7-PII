@@ -34,3 +34,4 @@ Route::get('/friends/{id}', [CobaController::class, 'show']);
 Route::get('/friends/{id}/edit', [CobaController::class, 'edit']);
 Route::put('/friends/{id}', [CobaController::class, 'update']);
 Route::delete('/friends/{id}', [CobaController::class, 'destroy']);
+Route::get('/data_teman', [CobaController::class, 'teman']);

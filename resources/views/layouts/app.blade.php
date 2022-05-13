@@ -24,7 +24,7 @@
                 <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ Request::is('friends*') ? 'active' : '' }}" href="/friends">Friends</a>
+                <a class="nav-link {{ Request::is('friends*') ? 'active' : '' }}" href="/data_teman">Friends</a>
               </li>
             </ul>
           </div>
