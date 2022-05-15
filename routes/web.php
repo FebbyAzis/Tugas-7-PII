@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CobaController;
+use App\Http\Controllers\GroupsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,11 +28,18 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/test', [CobaController::class, 'index']);
 
 // Route::get('/test/{ke}', [CobaController::class, 'urutan']);
-Route::get('', [CobaController::class, 'index']);
-Route::get('/friends', [CobaController::class, 'index']);
-Route::get('/friends/create', [CobaController::class, 'create']);
-Route::get('/friends/{id}', [CobaController::class, 'show']);
-Route::get('/friends/{id}/edit', [CobaController::class, 'edit']);
-Route::put('/friends/{id}', [CobaController::class, 'update']);
-Route::delete('/friends/{id}', [CobaController::class, 'destroy']);
-Route::get('/data_teman', [CobaController::class, 'teman']);
+
+//Route::get('', [CobaController::class, 'index']);
+//Route::get('/friends', [CobaController::class, 'index']);
+//Route::get('/friends/create', [CobaController::class, 'create']);
+//Route::get('/friends/{id}', [CobaController::class, 'show']);
+//Route::get('/friends/{id}/edit', [CobaController::class, 'edit']);
+//Route::put('/friends/{id}', [CobaController::class, 'update']);
+//Route::delete('/friends/{id}', [CobaController::class, 'destroy']);
+
+
+
+Route::resources([
+    'friends' => CobaController::class,
+    'groups' => GroupsController::class,
+]);

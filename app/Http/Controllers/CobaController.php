@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Friends;
-use App\Models\Teman;
+use App\Models\Teman; //untuk memanggil model
 use Illuminate\Http\Request;
 
 class CobaController extends Controller
@@ -27,12 +27,6 @@ class CobaController extends Controller
     {
         $friends = Friends::orderBy('id', 'desc')->paginate(3);
         return view('Friends.index', compact('friends'));
-    }
-    
-    public function teman()
-    {
-         $data_teman = Teman::all();
-         return view('Friends.data_teman', compact('data_teman'));
     }
 
     public function create()
