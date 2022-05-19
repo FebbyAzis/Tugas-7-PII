@@ -11,9 +11,8 @@ class Friends extends Model
 
     protected $guarded = ['nama'];
 
-
-public function groups()
+    public function groups()
     {
-        return $this->belongsTo('App/Models/Groups');
+        return $this->belongsTo('App\Models\Groups');
     }
 }

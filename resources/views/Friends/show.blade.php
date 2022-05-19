@@ -1,13 +1,25 @@
 @extends('layouts.app')
-
-@section('title', 'Cobaaaaaa')
-
+@section('title', 'cobaaaaaa')
 @section('content')
-  <div class="card">
-    <div class="card-body">
-    <h3>Nama Teman : {{ $friend['nama'] }}</h3>
-    <h3>Nomor Telepon Teman : {{ $friend['no_tlp'] }}</h3>
-    <h3>Alamat Teman: {{ $friend['alamat'] }}</h3>
-    </div>
- </div>
+
+<table class="table table-striped table-bordered" >
+    <tbody>
+        <th colspan="2">Detail Teman</th>
+    </tbody>
+    <tbody>
+        <tr>
+            <td>Nama Teman : </td>
+            <td>{{ $friend['nama'] }}</td>
+        </tr>
+        <tr>
+            <td>No Telepon : </td>
+            <td>{{ $friend['no_tlp'] }}</td>
+        </tr>
+        <tr>
+            <td>Alamat : </td>
+            <td>{{ $friend['alamat'] }}</td>
+        </tr>
+    </tbody>
+</table>
+    
 @endsection
