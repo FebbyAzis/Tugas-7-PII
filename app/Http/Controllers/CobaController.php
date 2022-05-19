@@ -4,18 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Friends;
-use App\Models\Groups;
 
 class CobaController extends Controller
 {
     public function index ()
     {
-        $friends = Friends::orderBy('id','desc')->paginate(4);
-        
-        $p = Groups::all();
-        $p->toArray();
+        $friends = Friends::orderBy('id','desc')->paginate(3);
 
-        return view ('friends.index', compact('friends'), ['p' => $p]);
+        return view ('friends.index', compact('friends'));
     }
 
     public function create ()

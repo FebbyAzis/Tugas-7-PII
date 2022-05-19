@@ -13,11 +13,7 @@
         <a href="/friends/{{ $friend['id']}}" class="card-title">{{ $friend['nama'] }}</a>
           <h6 class="card-subtitle mb-2 text-muted">{{ $friend['no_tlp'] }}</h6>
           <p class="card-text">{{ $friend['alamat'] }}.</p>
-          @foreach($p as $group)
-          <p>
-            {{$group->name}}
-          </p>    
-            @endforeach
+      
         <a href="/friends/{{$friend['id']}}/edit" class="card-link btn btn-warning">Edit teman</a>
         <form action="/friends/{{ $friend['id']}}" method="POST">
             @csrf
