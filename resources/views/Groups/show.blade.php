@@ -19,8 +19,8 @@
         <tr>
             <td>Mahasiswa : </td>
             <td>@foreach ($group->friends as $friend)
-        {{$friend->nama}}<br>
-        @endforeach</td>
+              <li>{{$friend->nama}}</li>
+              @endforeach</td>
         </tr>
     </tbody>
 </table>
