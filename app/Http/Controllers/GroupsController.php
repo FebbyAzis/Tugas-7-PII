@@ -120,7 +120,7 @@ class Groupscontroller extends Controller
             'groups_id' => $id
         ]);
 
-        return redirect('/groups/addmember/' . $id);
+        return redirect('/groups');
     }
 
     public function deleteaddmember(Request $request, $id)
