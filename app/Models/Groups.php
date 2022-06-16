@@ -9,7 +9,7 @@ class Groups extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['name'];
+    protected $guarded = ['nama'];
 
     public function friends()
     {

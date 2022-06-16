@@ -14,7 +14,7 @@
     @enderror
   </div>
 
-  <div class="form-group>
+  <div class="form-group">
     <label for="exampleInputPassword1">Description</label>
     <input type="text" class="form-control" name="description" id="exampleInputPassword1" value="{{ old('description') ? old ('description') : $friend['description'] }}" >
     @error('description')

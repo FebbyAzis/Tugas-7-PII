@@ -55,13 +55,13 @@ class CobaController extends Controller
 
         $request->validate([
             'nama' => 'required|unique:friends|max:255',
-            'no_telp' => 'required|numeric',
+            'no_tlp' => 'required|numeric',
             'alamat' => 'required',
         ]);
 
         Friends::find($id)->update([
             'nama' => $request->nama,
-            'no_telp'=>$request->no_tlp,
+            'no_tlp'=>$request->no_tlp,
             'alamat' => $request->alamat
         ]);
 
